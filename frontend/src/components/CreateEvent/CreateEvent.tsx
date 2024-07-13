@@ -60,8 +60,9 @@ export default function CreateEvent() {
   async function uploadFile(){
     if(imageUpload === null) throw new Error();
     else{
+      //@ts-ignore
       const imageRef = ref(storage, `images/${imageUpload.name+v4()}`)
-      const response = await uploadBytes(imageRef,imageUpload);
+      await uploadBytes(imageRef,imageUpload);
       const downloadUrl = await getDownloadURL(imageRef)
       setEventDetails({...eventDetails,images:downloadUrl})
     }
@@ -177,6 +178,7 @@ export default function CreateEvent() {
             <label>Images</label>
             <div className="flex flex-col justify-center items-end">
               <TextInput type="file" placeholder="Image Link" className="w-full" onChange={(e)=>{
+                //@ts-ignore
                 setImageUpload(e.target.files[0])
                 }} />
                 <Button className="bg-indigo-600 mt-3 max-w-fit" onClick={UploadToFirebase}>Upload</Button>

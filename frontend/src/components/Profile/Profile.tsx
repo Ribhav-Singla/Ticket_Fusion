@@ -1,4 +1,4 @@
-import { Button, Spinner, TextInput } from "flowbite-react";
+import {  Spinner, TextInput } from "flowbite-react";
 import "./Profile.css";
 import { useEffect, useState } from "react";
 import axios from "axios";
@@ -10,8 +10,6 @@ interface user{
 }
 
 export default function Profile() {
-  const [showPassword, setShowPassword] = useState(false);
-  const [changePassword, setChangePassword] = useState(false);
   const [loading,setLoading] = useState(true)
   const [userData,setUserData] = useState<user>({
     name:"",

@@ -17,7 +17,7 @@ export default function Signin() {
     password: "",
   });
 
-  async function handleSubmit(e) {
+  async function handleSubmit(e:any) {
     e.preventDefault();
     try {
       const response = await axios.post(

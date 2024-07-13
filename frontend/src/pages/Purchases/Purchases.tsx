@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import PurchasedEventCard from "../../components/PurchasedEventCard/PurchasedEventCard";
 import "./Purchases.css";
 import { Spinner, Table } from "flowbite-react";
-import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import CsvDownloader from "react-csv-downloader";
 import useDebounce from "../../customHooks/useDebounce";
@@ -53,7 +52,6 @@ interface myEvent {
 }
 
 export default function Purchases() {
-  const navigate = useNavigate();
   const [CSVData, setCSVDate] = useState([]);
   const [myEvents, setMyEvents] = useState<myEvent[]>([]);
   const [loading, setLoading] = useState(true);
@@ -92,6 +90,7 @@ export default function Purchases() {
               PurchaseDate: response.data[i].purchasedDate,
             });
           }
+          //@ts-ignore
           setCSVDate(datas);
         }
       } catch (error) {

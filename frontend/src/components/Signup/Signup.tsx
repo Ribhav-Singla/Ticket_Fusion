@@ -19,7 +19,7 @@ export default function Signup() {
     phonenumber: "",
   });
 
-  async function handleSubmit(e) {
+  async function handleSubmit(e:any) {
     e.preventDefault();
     try {
       const response = await axios.post(

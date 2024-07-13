@@ -1,6 +1,7 @@
 import './UserCard.css'
 import { Table } from 'flowbite-react'
 
+//@ts-ignore
 export default function UserCard({id,name,email,phonenumber,quantity,purchasedDate}:{id:string,name:string,email:string,phonenumber:string,quantity:number,purchasedDate:string}){
     return (
         <>

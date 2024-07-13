@@ -1,4 +1,4 @@
-import { Button, Spinner, Table } from "flowbite-react";
+import {  Spinner, Table } from "flowbite-react";
 import "./Users.css";
 import UserCard from "../UserCard.tsx/UserCard";
 import { useEffect, useState } from "react";

@@ -13,13 +13,14 @@ export default function({id,title,location,date,setToggleData}:{id:string,title:
 
     async function deleteEvent(){
         try {
-            const response =  await axios.delete(`${import.meta.env.VITE_BACKEND_URL}/api/v1/event/${id}`,{
+            await axios.delete(`${import.meta.env.VITE_BACKEND_URL}/api/v1/event/${id}`,{
                 headers:{
                     'Authorization': `${localStorage.getItem('token')}`
                     }
             })
             
             toast.info("event deleted")
+            //@ts-ignore
             setToggleData((prev)=>!prev)
         } catch (error) {
             console.log("error: ",error);

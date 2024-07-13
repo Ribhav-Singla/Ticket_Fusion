@@ -3,7 +3,8 @@ import "./QuillEditor.css";
 import Quill from "quill";
 import "quill/dist/quill.snow.css";
 
-function QuillEditor({setEventDetails,description}) {  
+function QuillEditor({setEventDetails,description}:{setEventDetails:any,description:any}) {  
+  //@ts-ignore
   const [editorContent, setEditorContent] = useState();
   
   useEffect(() => {
@@ -25,7 +26,9 @@ function QuillEditor({setEventDetails,description}) {
     console.log('quill root html is: ',description);
     
     quill.on("text-change", () => {
+      //@ts-ignore
       setEditorContent(quill.root.innerHTML)
+      //@ts-ignore
       setEventDetails((prev)=>{
         return {...prev , description:quill.root.innerHTML}
       })
