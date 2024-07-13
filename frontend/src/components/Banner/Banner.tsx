@@ -75,7 +75,7 @@ export default function Banner({id,date,title,time}:{id:string,date:string,title
           <Link to={`/event/${id}`}>
             <button className="bg-red-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded opacity-100 z-10 register-btn">{`REGISTER NOW`}</button>
           </Link>
-          <WhatsappShareButton url={`/event/${id}`} title={`${title} ${date} ${time}`}>
+          <WhatsappShareButton url={`${import.meta.env.VITE_BACKEND_URL}/event/${id}`} title={`${title} ${date} ${time}`}>
             <div className="flex justify-center items-center gap-3 py-1 px-4 rounded bg-slate-500 hover:bg-slate-600 text-white">
               <p className="font-bold ">Share on WhatsApp</p>
               <WhatsappIcon size={30} round/>
