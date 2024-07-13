@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom'
 import { toast } from 'react-toastify'
 import Users from '../Users/Users'
 
-export default function({id,title,location,date,setToggleData}:{id:string,title:string,location:string,date:string,setToggleData: ()=>void}){
+export default function({id,title,location,date,setToggleData}:{id:string,title:string,location:string,date:string,setToggleData:React.Dispatch<React.SetStateAction<boolean>>}){
     
     const [toggleDelete ,setToggleDelete] = useState(false)
     const [list,setList] = useState(false)
