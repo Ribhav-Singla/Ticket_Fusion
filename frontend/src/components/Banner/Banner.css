@@ -1,0 +1,28 @@
+.ribbon {
+    font-size: 20px;
+    font-weight:600;
+    color: #fff;
+    --r: 0.8em; /* control the cutout */
+    padding-right: calc(var(--r) + 0.25em);
+    padding-left: 0.5rem;
+    line-height: 1.8;
+    clip-path: polygon(
+      -100vw 0,
+      calc(100% - var(--r)) 0,
+      100% 50%,
+      calc(100% - var(--r)) 100%,
+      -100vw 100%
+    );
+    background: red; /* fallback color in case border-image doesn't work */
+    border-image: conic-gradient(#45ada8 0 0) fill 0/100vw;
+    width: fit-content;
+  }
+
+  .register-btn{
+    background-color: red !important;
+  }
+  .register-btn:hover{
+    background-color: rgb(249, 51, 51) !important;
+  }
+
+  

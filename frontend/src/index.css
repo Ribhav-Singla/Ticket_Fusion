@@ -1,0 +1,28 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.banner-container {
+  background-image: url(https://www.pingpongmoments.in/blog/wp-content/uploads/2022/09/corporate-events-3.jpg);
+  background-size: contain;
+  opacity: 0.65;
+}
+
+.blackShadow {
+  text-shadow: 1px 1px 2px rgb(0, 0, 0), 2px 2px 4px rgb(0, 0, 0), 0 0 8px black,
+    0 0 16px black,0 0 32px black,1px 1px 64px black,6px 6px 70px black;
+    -webkit-text-stroke: 1px rgb(255, 255, 255);
+  color: rgb(255, 255, 255,1);
+}
+
+.orangeShadow{
+    text-shadow: 1px 1px 2px rgb(0, 0, 0), 2px 2px 4px rgb(0, 0, 0), 0 0 8px black,
+    0 0 16px black,0 0 32px black,1px 1px 64px black,6px 6px 70px black;
+    -webkit-text-stroke: 1px rgb(255, 94, 0);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}

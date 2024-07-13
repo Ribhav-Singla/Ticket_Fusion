@@ -1,0 +1,49 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String        @id @default(cuid())
+  name         String
+  email        String        @unique
+  password     String
+  phonenumber  String        @unique
+  events       Event[]
+  eventTickets EventTicket[]
+}
+
+model Event {
+  id          String        @id @default(cuid())
+  title       String        @unique
+  description String        @unique
+  images      String        @default("https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8d2VkZGluZyUyMGV2ZW50fGVufDB8fDB8fHww")
+  date        String
+  time        String
+  location    String
+  tickets     Int
+  fee         Int           @default(0)
+  creator     User          @relation(fields: [creatorId], references: [id] , onDelete: Cascade)
+  creatorId   String
+  attendees   EventTicket[]
+}
+
+model EventTicket {
+  id       String @id @default(cuid())
+  user     User   @relation(fields: [userId], references: [id], onDelete: Cascade)
+  userId   String
+  event    Event  @relation(fields: [eventId], references: [id], onDelete: Cascade)
+  eventId  String
+  quantity Int
+  purchasedDate DateTime @default(now())
+}

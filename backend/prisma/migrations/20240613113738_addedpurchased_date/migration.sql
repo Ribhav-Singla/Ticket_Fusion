@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "EventTicket" ADD COLUMN     "purchasedDate" TIMESTAMP(3) NOT NULL DEFAULT CURRENT_TIMESTAMP;
