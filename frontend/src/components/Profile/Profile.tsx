@@ -57,7 +57,7 @@ useEffect(()=>{
                 width={10}
                 />
             </div>
-          <div className="flex flex-col gap-4 w-3/12 mt-6">
+          <div className="flex flex-col gap-4 w-3/4 md:w-2/4 mt-6">
             <div>
               <label>Name</label>
               <TextInput

@@ -211,8 +211,8 @@ export default function Signup() {
             </div>
           </div>
         </div>
-        <div className="md:col-span-5 lg:col-span-6 col-span-6 bg-slate-50 min-h-screen w-full flex justify-center items-center">
-          <div className="flex justify-center items-center pt-10">
+        <div className="hidden md:col-span-5 lg:col-span-6 col-span-6 bg-slate-50 min-h-screen w-full md:flex justify-center items-center">
+          <div className="hidden  md:flex justify-center items-center pt-10">
             <img src={signupsvg} width={550}  />
           </div>
         </div>
