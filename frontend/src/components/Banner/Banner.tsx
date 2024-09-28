@@ -46,39 +46,39 @@ export default function Banner({id,date,title,time}:{id:string,date:string,title
 
   return (
     <div className="text-white">
-      <div className="ribbon">{(new Date(date)).toLocaleDateString()+ " - " + `${time}`}</div>
+      <div className="ribbon lg:text-xl">{(new Date(date)).toLocaleDateString()+ " - " + `${time}`}</div>
       <div className="flex flex-col justify-center items-center">
-        <h2 className="font-bold text-5xl mb-7 text-center blackShadow ">
+        <h2 className="font-bold text-2xl md:text-4xl lg:text-5xl mb-7 text-center blackShadow ">
           DONT MISS THE UPCOMING EVENT
           <br />
-          <span className=" font-bold text-orange-500 text-[1.9rem] orangeShadow banner-title">{title}</span> 
+          <span className=" font-bold text-orange-500 text-2xl md:text-3xl lg:text-4xl orangeShadow banner-title">{title}</span> 
         </h2>
-        <div className="flex justify-center items-center gap-6 mb-9">
-          <div className="flex flex-col items-center justify-center text-2xl font-semibold orangeShadow text-orange-500 ">
+        <div className="flex justify-center items-center gap-6 mb-9 text-xl md:text-2xl lg:text-2xl">
+          <div className="flex flex-col items-center justify-center  font-semibold orangeShadow text-orange-500 ">
             <p>{`${timeLeft.Days}`}</p>
             <p className="text-orange-500 orangeShadow">{`Days`}</p>
           </div>
-          <div className="flex flex-col items-center justify-center text-2xl font-semibold blackShadow">
+          <div className="flex flex-col items-center justify-center  font-semibold blackShadow">
             <p>{`${timeLeft.Hours}`}</p>
             <p className="text-white blackShadow">{`Hours`}</p>
           </div>
-          <div className="flex flex-col items-center justify-center text-2xl font-semibold orangeShadow text-orange-500 ">
+          <div className="flex flex-col items-center justify-center  font-semibold orangeShadow text-orange-500 ">
             <p>{`${timeLeft.Minutes}`}</p>
             <p className="text-orange-500 orangeShadow">{`Minutes`}</p>
           </div>
-          <div className="flex flex-col items-center justify-center text-2xl font-semibold blackShadow">
+          <div className="flex flex-col items-center justify-center  font-semibold blackShadow">
             <p>{`${timeLeft.Seconds}`}</p>
             <p className="text-white blackShadow">{`Seconds`}</p>
           </div>
         </div>
-        <div className="flex justify-center items-center gap-5">
+        <div className="flex justify-center items-center gap-5 text-xs sm:text-sm text-base">
           <Link to={`${window.location.origin}/event/${id}`}>
             <button className="bg-red-500 hover:bg-orange-600 text-white font-bold py-2 px-4 rounded opacity-100 z-10 register-btn">{`REGISTER NOW`}</button>
           </Link>
           <WhatsappShareButton url={`/event/${id}`} title={`${title} ${date} ${time}`}>
             <div className="flex justify-center items-center gap-3 py-1 px-4 rounded bg-slate-500 hover:bg-slate-600 text-white">
               <p className="font-bold ">Share on WhatsApp</p>
-              <WhatsappIcon size={30} round/>
+              <WhatsappIcon size={25} round/>
             </div>
           </WhatsappShareButton>
         </div>

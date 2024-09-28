@@ -106,7 +106,7 @@ export default function FullEvent() {
       <div className="flex justify-center items-center mt-7">
         <div className="flex flex-col justify-center items-center w-full max-w-7xl pl-2 pr-2">
           <div className="grid grid-cols-12 w-full">
-            <div className="col-span-6 bg-slate-100 pt-2 pb-3 rounded-s-lg max-h-96 md:max-h-80">
+            <div className="col-span-12 md:col-span-6 bg-slate-100 pt-2 pb-3 rounded-b-lg md:rounded-s-lg max-h-96 md:max-h-80 order-2 md:order-1">
               <div className="flex flex-col justify-center items-start h-full max-h-96 md:max-h-80 p-2 text-lg gap-1">
                 <h1 className="font-bold text-3xl mb-1">{eventData.title}</h1>
                 <p>
@@ -160,11 +160,11 @@ export default function FullEvent() {
                 </div>
               </div>
             </div>
-            <div className="col-span-6 h-full max-h-96 md:max-h-80">
+            <div className="col-span-12 md:col-span-6 h-full max-h-96 md:max-h-80 order-1 md:order-2">
               <img
                 src={eventData.images}
                 alt="event-image"
-                className="w-full h-full rounded-e-lg"
+                className="w-full h-full rounded-t-lg md:rounded-e-lg"
               />
             </div>
           </div>

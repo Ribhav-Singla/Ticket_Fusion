@@ -55,7 +55,7 @@ export default function Home() {
       <div className="flex items-center justify-center border-b-2 w-[15rem] mt-3 mb-3 pb-1">
         <h3 className="text-xl font-bold">Upcoming Events</h3>
       </div>
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ml-3 mr-3 mt-2">
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 ml-3 mr-3 mt-2">
         {
           events.map((obj) => {
             return (
