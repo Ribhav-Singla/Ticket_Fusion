@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Events.css";
-import { Checkbox, Datepicker, TextInput } from "flowbite-react";
+import { Checkbox, Datepicker, Spinner, TextInput } from "flowbite-react";
 import EventCard from "../../components/EventCard/EventCard";
 import axios from "axios";
 import Skeleton from "../../components/Skeleton/Skeleton";
@@ -229,10 +229,7 @@ export default function Events() {
         <div className="p-2 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5">
           {loading ? (
             <div className="flex gap-8 justify-center">
-              <Skeleton />
-              <Skeleton />
-              <Skeleton />
-              <Skeleton />
+              <Spinner/>
             </div>
           ) : (
             events.map((obj) => {
