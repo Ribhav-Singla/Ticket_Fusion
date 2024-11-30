@@ -3,7 +3,6 @@ import "./Events.css";
 import { Checkbox, Datepicker, Spinner, TextInput } from "flowbite-react";
 import EventCard from "../../components/EventCard/EventCard";
 import axios from "axios";
-import Skeleton from "../../components/Skeleton/Skeleton";
 import useDebounce from "../../customHooks/useDebounce";
 import {motion} from 'framer-motion'
 
